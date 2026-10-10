@@ -2,7 +2,7 @@ from langchain_core.messages import HumanMessage, ToolMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 from tools import query_financials, search_documents, traverse_knowledge_graph
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.0)
+llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash", temperature=0.0)
 trinity_tools = [query_financials, search_documents, traverse_knowledge_graph]
 llm_with_tools = llm.bind_tools(trinity_tools)
 
